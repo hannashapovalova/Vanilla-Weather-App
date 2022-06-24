@@ -26,4 +26,11 @@ h1 {
     height: 450px;
     margin-top: 25px;
     margin-bottom: 25px;
+    min-width: 300px;
+}
+.forecast {
+    margin-top: 30px;
+}
+.precipitation {
+    margin-top: 30px;
 }
