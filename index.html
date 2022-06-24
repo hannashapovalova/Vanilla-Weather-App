@@ -15,8 +15,7 @@
       crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;500&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="weather-app">
@@ -31,12 +30,16 @@
   <!-- Information about current weather -->
         <div class="weather-information-block">
   <!-- Real Time, Day, Month -->
-          <h2 class="current-time"><time>12:00</time></h2>
-          <h3 class="current-date">03 May</h3>
-          <h3 class="current-day-of-week">Friday</h3>
+          <div class="current-date-block">
+            <h2 class="current-time"><time>12:00</time></h2>
+            <h3 class="current-date">03 May</h3>
+            <h3 class="current-day-of-week">Friday</h3>
+          </div> <!--class="current-date-block"-->
   <!-- Temperature and City -->
-          <h1 class="current-temperature">12 <sup class="unit">C°|F°</sup></h1>
-          <h1 class="current-city">Kyiv</h1>
+          <div class="current-weather-block">
+            <h1 class="current-temperature">12 <sup class="unit">C°|F°</sup></h1>
+            <h1 class="current-city">Kyiv</h1>
+          </div> <!--class="current-weather-block"-->
         </div> <!--class="weather-information-block"-->
       </div> <!--class="col-8"-->
      

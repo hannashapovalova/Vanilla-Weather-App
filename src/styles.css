@@ -1,11 +1,16 @@
 
-
+body {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    height: 650px;
+}
 
 h1 {
     display: inline;
 }
 
-
+footer {
+    margin-top: 25px;
+}
 
 .weather-app {
     color: darkolivegreen;
@@ -13,12 +18,17 @@ h1 {
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     
+    
 }
 .main-content-block {
     border: 1px solid green;
     height: 500px;
     margin-top: 50px;
+    border-radius: 15px;
 
+}
+.current-date-block {
+    margin-top: 25px;
 }
 .current-time {
     font-weight: 200;
@@ -27,13 +37,16 @@ h1 {
 }
 .current-date {
     font-weight: 200;
-    font-size: 35px;
+    font-size: 25px;
 
 }
 .current-day-of-week {
     font-weight: 200;
-    font-size: 35px;
+    font-size: 25px;
 
+}
+.current-weather-block {
+    margin-top: 220px;
 }
 .current-temperature {
     font-style: normal;
@@ -51,6 +64,7 @@ h1 {
     font-weight: 500;
     font-size: 70px;
     color: #000000;
+    margin-left: 25px;
 }
 .sidebar {
     background: rgb(221, 219, 215, 0.9);
@@ -62,11 +76,11 @@ h1 {
     min-width: 300px;
 }
 .forecast {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .forecast-item {
 
 }
 .precipitation {
-    margin-top: 30px;
+    margin-top: 25px;
 }
