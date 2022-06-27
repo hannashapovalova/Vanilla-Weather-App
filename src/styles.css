@@ -10,6 +10,13 @@ h1 {
 
 footer {
     margin-top: 25px;
+    color: #CFD5DB;
+}
+a {
+    color: #ffcbcb;
+}
+a:hover {
+    color: #ffb5b5;
 }
 /* MAIN BLOCK */
 
