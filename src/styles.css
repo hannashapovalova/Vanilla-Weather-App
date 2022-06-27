@@ -50,7 +50,13 @@ a:hover {
 }
 .current-weather-block {
     margin-top: 220px;
-    text-shadow: -1px 0 #c7b198, 0 1px #c7b198, 1px 0 #c7b198, 0 -1px #c7b198;
+    
+}
+.main-icon {
+    width: 200px;
+    margin-left: -50px;
+    
+
 }
 .current-temperature {
     font-style: normal;
@@ -60,7 +66,13 @@ a:hover {
 .unit {
     font-weight: 200;
     font-size: 35px;
-
+}
+.unit:hover {
+    cursor: pointer;
+    color: #ace0f9;
+}
+.separator {
+    font-size: 35px;
 }
 .current-city {
     font-style: normal;
@@ -81,6 +93,7 @@ a:hover {
     min-width: 300px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .input-form:focus {
     border-color: #ace0f9;
     box-shadow: 0 0 0 0.2rem #ace0f9;
@@ -89,7 +102,7 @@ a:hover {
     padding: 5px;
     font-size: 15px;
     color: white;
-    border-color: #CFD5DB;
+    border-color: #ace0f9;
     background-color: #ace0f9;
     border-width: 2px;
 }
@@ -123,6 +136,7 @@ a:hover {
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) fixed;
     border-radius: 15px;
     margin-top: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .mini-icon:hover {
     width: 45px;
