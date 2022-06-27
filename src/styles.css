@@ -18,6 +18,7 @@ a {
 a:hover {
     color: #ffb5b5;
 }
+
 /* MAIN BLOCK */
 
 .weather-app {
@@ -69,6 +70,7 @@ a:hover {
 }
 
 /* SIDEBAR */
+
 .sidebar {
     background: #CFD5DB;
     padding: 15px;
@@ -78,6 +80,22 @@ a:hover {
     margin-bottom: 25px;
     min-width: 300px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.input-form:focus {
+    border-color: #ace0f9;
+    box-shadow: 0 0 0 0.2rem #ace0f9;
+}
+.search-button, .find-me-button {
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    border-color: #CFD5DB;
+    background-color: #ace0f9;
+    border-width: 2px;
+}
+.search-button:hover, .find-me-button:hover {
+    background-color: #ffb5b5;
+    border-color: #ffcbcb;
 }
 .forecast {
     margin-top: 20px;
