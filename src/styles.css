@@ -116,11 +116,19 @@ a:hover {
 .forecast-wind {
     margin-top: 15px;
 }
+.forecast-temperature:hover  {
+    font-size: 21px;
+}
 .mini-icon {
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) fixed;
     border-radius: 15px;
     margin-top: 5px;
 }
+.mini-icon:hover {
+    width: 45px;
+    border-radius: 25px;
+}
 .precipitation {
     margin-top: 10px;
+    
 }
