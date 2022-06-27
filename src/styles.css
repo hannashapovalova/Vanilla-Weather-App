@@ -1,6 +1,6 @@
 
 body {
-    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) fixed;
+    background: linear-gradient(to top, #EFD4D3 0%, #ace0f9 100%) fixed;
     
 }
 
@@ -10,13 +10,13 @@ h1 {
 
 footer {
     margin-top: 25px;
-    color: #CFD5DB;
+    color: #b4b4b4;
 }
 a {
-    color: #ffcbcb;
+    color: #E4ACAB;
 }
 a:hover {
-    color: #ffb5b5;
+    color: #D29798;
 }
 
 /* MAIN BLOCK */
