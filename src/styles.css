@@ -7,9 +7,6 @@ body {
 h1 {
     display: inline;
 }
-hr {
-    color: green
-}
 
 footer {
     margin-top: 25px;
@@ -83,14 +80,17 @@ footer {
 }
 .forecast {
     margin-top: 25px;
+    margin-left: 25px;
 }
-.forecast-item, .precipitation-item {
+.forecast-list {
+    padding: 0;
+}
+.forecast-item, .precipitation-item, .forecast-icon {
     list-style-type: none;
     padding: 0;
     margin-top: 12px;
-    
-
 }
+
 .precipitation {
     margin-top: 25px;
 }

@@ -8,7 +8,6 @@
     <meta name="description" content="On this page you can find the exact weather forecast.">
     <title>Weather App</title>
     <link rel="icon" href="src/weather-title-icon.svg.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/styles.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
@@ -16,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css" type="text/css">
 </head>
 <body>
 <div class="weather-app">
@@ -37,6 +37,7 @@
           </div> <!--class="current-date-block"-->
   <!-- Temperature and City -->
           <div class="current-weather-block">
+            <img src="src/icons/5729392_cloudy_sunny_forecast_sun_cloud_weather.png" alt="Сloudy with clearings" width="200px">
             <h1 class="current-temperature">12 <sup class="unit">C°|F°</sup></h1>
             <h1 class="current-city">Kyiv</h1>
           </div> <!--class="current-weather-block"-->
@@ -90,6 +91,15 @@
                     <li class="forecast-item">11 C°</li>
                     <li class="forecast-item">10 C°</li>
                     <li class="forecast-item">14 C°</li>
+                  </ul>
+                </div> <!--class="col"-->
+                <div class="col">
+                  <ul class="forecast-list">
+                    <li class="forecast-icon"><span><img src="src/icons/5729378_sunny_sun_weather_climate_forecast.png" alt="Sunny" width="25px"></span></li>
+                    <li class="forecast-icon"><img src="src/icons/5729382_forecast_sun_cloud_weather_raining.png" alt="Сloudy with clearings,sometimes raining" width="25px"></li>
+                    <li class="forecast-icon"><img src="src/icons/5729391_cloud_weather_forecast_rain_cloudy.png" alt="Cloudy" width="25px"></li>
+                    <li class="forecast-icon"> <img src="src/icons/5729390_weather_drip_forecast_drop_cloud.png" alt="A little rainy" width="25px"></li>
+                    <li class="forecast-icon"> <img src="src/icons/5729386_forecast_weather_lightning_thunder_climate.png" alt="Thunderstorm" width="25px"></li>
                   </ul>
                 </div> <!--class="col"-->
               </div> <!--class="row"-->
