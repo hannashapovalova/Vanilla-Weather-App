@@ -31,8 +31,23 @@
         <div class="weather-information-block">
   <!-- Real Time, Day, Month -->
           <div class="current-date-block">
-            <h2 class="current-time"><time>12:00</time></h2>
-            <h3 class="current-date">03 May</h3>
+            <h2 class="current-time">
+              <time class="current-hours">
+                12
+              </time>
+              :
+              <time class="current-minutes">
+                00
+              </time>
+            </h2>
+            <h3>
+              <span class="current-date">
+                03 
+              </span>
+              <span class="current-month">
+                May
+              </span>
+            </h3>
             <h3 class="current-day-of-week">Friday</h3>
           </div> <!--class="current-date-block"-->
   <!-- Temperature and City -->
@@ -193,5 +208,6 @@
   </footer>
 
 </div> <!--class ="weather-app"-->
+<script src="src/data.js"></script>
 </body>
 </html>
