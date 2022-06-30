@@ -12,12 +12,7 @@ footer {
     margin-top: 25px;
     color: #b4b4b4;
 }
-a {
-    color: #E4ACAB;
-}
-a:hover {
-    color: #D29798;
-}
+
 
 /* MAIN BLOCK */
 
@@ -58,20 +53,30 @@ a:hover {
     
 
 }
+
 .current-temperature {
     font-style: normal;
     font-weight: 500;
     font-size: 85px;
     margin-left: -90px;
 }
-.unit {
+.unit { 
     font-weight: 200;
     font-size: 35px;
     margin-left: 5px;
+
 }
-.unit:hover {
-    cursor: pointer;
+.farenheit-unit, 
+.celsius-unit {
+    color: #fff;
+    text-decoration: none;
+    
+    
+}
+.farenheit-unit:hover,
+.celsius-unit:hover {
     color: #ace0f9;
+    transition: all 0.5s 0s ease-in-out;
 }
 .separator {
     font-size: 35px;
@@ -79,7 +84,7 @@ a:hover {
 .current-city {
     font-style: normal;
     font-weight: 500;
-    font-size: 70px;
+    font-size: 55px;
     margin-left: 10px;
 }
 
@@ -101,6 +106,7 @@ a:hover {
     box-shadow: 0 0 0 0.2rem #ace0f9;
 }
 .search-button, .find-me-button {
+   
     padding: 5px;
     font-size: 15px;
     color: white;
@@ -112,6 +118,7 @@ a:hover {
 .find-me-button:hover {
     background-color: #ffb5b5;
     border-color: #ffcbcb;
+    transition: all 0.5s 0s ease-in-out;
 }
 .search-button:focus, 
 .find-me-button:focus {
@@ -137,8 +144,13 @@ a:hover {
 .forecast-wind {
     margin-top: 15px;
 }
-.forecast-temperature:hover  {
-    font-size: 21px;
+.forecast-temperature:hover, 
+.forecast-humidity-value:hover, 
+.forecast-wind-value:hover {
+    transform: scale(1.2);
+    transition: all 0.5s 0s ease-in-out;
+  
+
 }
 .mini-icon {
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) fixed;
@@ -147,10 +159,18 @@ a:hover {
    
 }
 .mini-icon:hover {
-    width: 45px;
+    transition: all 0.5s 0s ease-in-out;
+    transform: scale(1.2);
     border-radius: 25px;
 }
 .precipitation {
     margin-top: 10px;
     
+}
+
+.subscription {
+    color: #E4ACAB;
+}
+.subscription:hover {
+    color: #D29798;
 }
