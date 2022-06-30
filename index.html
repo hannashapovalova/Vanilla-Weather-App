@@ -7,6 +7,7 @@
     <meta name="author" content="Anna Shapovalova">
     <meta name="description" content="On this page you can find the exact weather forecast.">
     <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="icon" href="src/weather-title-icon.svg.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
       rel="stylesheet"
@@ -72,24 +73,28 @@
           <aside>
             
  <!-- Search Form -->
+          
+          <form id="search-form">
             <div class="input-group">
               <input 
                 type="search" 
-                class="form-control rounded input-form" 
+                class="form-control rounded input-form"
+                id="search-text-input" 
                 placeholder="Search city" 
                 aria-label="Search"
                 aria-describedby="search-addon" />
               <button 
-                type="button" 
+                type="submit" 
                 class="btn btn-outline-primary search-button">
                 Search
               </button>
               <button 
-                type="button" 
+                type="submit" 
                 class="btn btn-outline-primary find-me-button">
                 Find me
               </button>
             </div> <!--class="input-group">-->
+          </form>
 
  <!-- Forecast -->
             <div class="forecast">

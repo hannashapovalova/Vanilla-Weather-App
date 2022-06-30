@@ -1,3 +1,4 @@
+
 // Current Dates, Hours, Minutes, Day, Months
 
 let now = new Date ();
@@ -11,8 +12,6 @@ if (currentHours < 10) {
     currentHours = `0${currentHours}`;
 } 
 housrs.innerHTML = `${currentHours}`;
-
-
 
 let minutes = document.querySelector(".current-minutes");
 let currentMinutes = now.getMinutes();
@@ -51,3 +50,13 @@ let months = [
 let currentDayOfWeeek = days[now.getDay()];
 let dayOfWeek = document.querySelector(".current-day-of-week");
 dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
+
+// API
+
+function getApiWeather(city) {
+    let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
+    let units = "metric";
+    let city = "Lisboa";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(showTemperature);
+}
