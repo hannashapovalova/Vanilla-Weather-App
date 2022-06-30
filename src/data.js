@@ -56,7 +56,39 @@ dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
 function getApiWeather(city) {
     let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
     let units = "metric";
-    let city = "Lisboa";
+    //let city = "Lisboa";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showTemperature);
+}
+
+// Search Form
+
+function search(event) {
+    event.preventDefault();
+    let searchInput = document.querySelector("#search-text-input");
+    getApiWeather(searchInput.value);
+    let currentCity = document.querySelector(".current-city");
+    if (searchInput.value) {
+    currentCity.innerHTML = `${searchInput.value}`;
+    } else {
+    currentCity.innerHTML = null;
+    alert("Please, type a city...");
+    }
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
+
+function showTemperature(response) {
+    let temp = Math.round(response.data.main.temp);
+    let showTemp = document.querySelector(".current-temperature");
+    showTemp.innerHTML = `${temp}`;
+
+    let wind = Math.round(response.data.wind.speed);
+    let showWind = document.querySelector("#wind-speed");
+    showWind.innerHTML = `${wind}`;
+    
+    let humidity = Math.round(response.data.main.humidity);
+    let showHumidity = document.querySelector("#humidity");
+    showHumidity.innerHTML = `${humidity}`;
 }
