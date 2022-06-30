@@ -92,3 +92,30 @@ function showTemperature(response) {
     let showHumidity = document.querySelector("#humidity");
     showHumidity.innerHTML = `${humidity}`;
 }
+
+// Get current city and temp by Geolocation
+
+function getPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showCurrentData);
+}
+
+function showCurrentData(response) {
+  let city = response.data.name;
+  let currentCity = document.querySelector(".current-city");
+  currentCity.innerHTML = `${city}`;
+  let temp = Math.round(response.data.main.temp);
+  let currentTemp = document.querySelector(".current-temperature");
+  currentTemp.innerHTML = `${temp}°C`;
+}
+
+function findMeButton() {
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+
+let button = document.querySelector(".find-me-button");
+button.addEventListener("click", findMeButton);
