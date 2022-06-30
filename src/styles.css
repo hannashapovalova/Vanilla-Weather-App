@@ -108,7 +108,13 @@ a:hover {
     background-color: #ace0f9;
     border-width: 2px;
 }
-.search-button:hover, .find-me-button:hover {
+.search-button:hover, 
+.find-me-button:hover {
+    background-color: #ffb5b5;
+    border-color: #ffcbcb;
+}
+.search-button:focus, 
+.find-me-button:focus {
     background-color: #ffb5b5;
     border-color: #ffcbcb;
 }
