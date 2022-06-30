@@ -119,3 +119,21 @@ function findMeButton() {
 
 let button = document.querySelector(".find-me-button");
 button.addEventListener("click", findMeButton);
+
+//Change temperature Celsius/Farenhait
+
+function tempFarenhait(event) {
+    event.preventDefault();
+    let farenhait = document.querySelector(".current-temperature");
+    farenhait.innerHTML = "70"; //add real data
+}
+let showTempF = document.querySelector("#farenheit");
+showTempF.addEventListener("click", tempFarenhait);
+
+function tempCelsius(event) {
+    event.preventDefault();
+    let celsius = document.querySelector(".current-temperature");
+    celsius.innerHTML = "21"; //add real data
+}
+let showTempC = document.querySelector("#celsius");
+showTempC.addEventListener("click", tempCelsius);
