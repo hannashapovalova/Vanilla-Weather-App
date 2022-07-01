@@ -1,19 +1,19 @@
-
+window.onload = findMeButton;
 // Current Dates, Hours, Minutes, Day, Months
 
 let now = new Date ();
-let date = document.querySelector(".current-date");
+let date = document.querySelector("#date");
 let currentDate = now.getDate();
 date.innerHTML = `${currentDate}`;
 
-let housrs = document.querySelector(".current-hours");
+let housrs = document.querySelector("#hours");
 let currentHours = now.getHours();
 if (currentHours < 10) {
     currentHours = `0${currentHours}`;
 } 
 housrs.innerHTML = `${currentHours}`;
 
-let minutes = document.querySelector(".current-minutes");
+let minutes = document.querySelector("#minutes");
 let currentMinutes = now.getMinutes();
 if (currentMinutes < 10) {
     currentMinutes = `0${currentMinutes}`;
@@ -35,7 +35,7 @@ let months = [
     "December"
   ];
   let currentMonth = months[now.getMonth()];
-  let month = document.querySelector(".current-month");
+  let month = document.querySelector("#month");
   month.innerHTML = `${currentMonth}`;
 
   let days = [
@@ -48,7 +48,7 @@ let months = [
     "Saturday"
 ]
 let currentDayOfWeeek = days[now.getDay()];
-let dayOfWeek = document.querySelector(".current-day-of-week");
+let dayOfWeek = document.querySelector("#day");
 dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
 
 // API
@@ -66,7 +66,7 @@ function search(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#search-text-input");
     getApiWeather(searchInput.value);
-    let currentCity = document.querySelector(".current-city");
+    let currentCity = document.querySelector("#city");
     if (searchInput.value) {
     currentCity.innerHTML = `${searchInput.value}`;
     } else {
@@ -78,8 +78,8 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemperature(response) {
-    let temp = Math.round(response.data.main.temp);
-    let showTemp = document.querySelector(".current-temperature");
+    temp = Math.round(response.data.main.temp);
+    let showTemp = document.querySelector("#temperature");
     showTemp.innerHTML = `${temp}`;
 
     let wind = Math.round(response.data.wind.speed);
@@ -104,11 +104,11 @@ function getPosition(position) {
 
 function showCurrentData(response) {
   let city = response.data.name;
-  let currentCity = document.querySelector(".current-city");
+  let currentCity = document.querySelector("#city");
   currentCity.innerHTML = `${city}`;
   let temp = Math.round(response.data.main.temp);
   let cutTemp = temp.slice(0, -1);
-  let currentTemp = document.querySelector(".current-temperature");
+  let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = `${cutTemp}°C`;
 }
 
@@ -123,16 +123,29 @@ button.addEventListener("click", findMeButton);
 
 function tempFarenhait(event) {
     event.preventDefault();
-    let farenhait = document.querySelector(".current-temperature");
-    farenhait.innerHTML = "70"; //add real data
+    let farenhaitTemperatureElement = document.querySelector("#temperature");
+    let farenhaitTemperature = (temp * 9) / 5 + 32;
+    farenhaitTemperatureElement.innerHTML = Math.round(farenhaitTemperature);
 }
-let showTempF = document.querySelector("#farenheit");
-showTempF.addEventListener("click", tempFarenhait);
 
 function tempCelsius(event) {
     event.preventDefault();
-    let celsius = document.querySelector(".current-temperature");
-    celsius.innerHTML = "21"; //add real data
+    let celsiusTemperatureElement = document.querySelector("#temperature");
+    celsiusTemperatureElement.innerHTML = `${temp}`
 }
+
+let cutTemp = null;
+
+let showTempF = document.querySelector("#farenheit");
+showTempF.addEventListener("click", tempFarenhait);
+
 let showTempC = document.querySelector("#celsius");
 showTempC.addEventListener("click", tempCelsius);
+
+
+
+
+
+
+
+
