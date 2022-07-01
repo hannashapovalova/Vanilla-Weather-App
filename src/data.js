@@ -70,7 +70,6 @@ function search(event) {
     if (searchInput.value) {
     currentCity.innerHTML = `${searchInput.value}`;
     } else {
-    currentCity.innerHTML = null;
     alert("Please, type a city...");
     }
 }

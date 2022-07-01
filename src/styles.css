@@ -27,11 +27,6 @@ footer {
     margin-top: 50px;
     border-radius: 15px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-   
-   
-}
-.current-date-block {
-    /* margin-top: 25px; */
 }
 .current-time {
     font-weight: 200;
@@ -45,22 +40,9 @@ footer {
     font-weight: 200;
     font-size: 25px;
 }
-.current-weather-block {
-    /* margin-top: 220px; */
-    
-}
 .main-icon {
     width: 250px;
-    
-   
 }
-.main-icon:hover {
-    transform: scale(1.2);
-    transition: all 0.4s 0s ease-in-out;
-    opacity: 0.8;
-
-}
-
 .current-date-block {
     
     margin-left: 25px;
@@ -68,54 +50,36 @@ footer {
     margin-top: 25px;
     width: fit-content;
     text-align: center;
-    
-  
 }
 .current-weather-block {
     display: block;
     float: left;
-    
     margin-bottom: 25px;
     width: fit-content;
     padding-top: 50px;
     margin-left: -75px;
-    overflow: hidden;
-    
-    
-    
-
-    
+    /* overflow: hidden;   */
 }
 .main-icon-area {
     
     float: left;
-
+    margin-left: -35px;
     width: fit-content;
-    
-    
-   
-    
-    
-   
 }
 .current-temperature {
     font-style: normal;
     font-weight: 500;
     font-size: 85px;
-    
 }
 .unit { 
     font-weight: 200;
     font-size: 35px;
     margin-left: 5px;
-
 }
 .farenheit-unit, 
 .celsius-unit {
     color: #fff;
     text-decoration: none;
-    
-    
 }
 .farenheit-unit:hover,
 .celsius-unit:hover {
@@ -129,8 +93,6 @@ footer {
     font-style: normal;
     font-weight: 500;
     font-size: 55px;
-    /* margin-left: 10px; */
-    
 }
 
 /* SIDEBAR */
