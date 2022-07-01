@@ -56,7 +56,6 @@ dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
 function getApiWeather(city) {
     let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
     let units = "metric";
-    //let city = "Lisboa";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showTemperature);
 }
@@ -109,8 +108,9 @@ function showCurrentData(response) {
   let currentCity = document.querySelector(".current-city");
   currentCity.innerHTML = `${city}`;
   let temp = Math.round(response.data.main.temp);
+  let cutTemp = temp.slice(0, -1);
   let currentTemp = document.querySelector(".current-temperature");
-  currentTemp.innerHTML = `${temp}°C`;
+  currentTemp.innerHTML = `${cutTemp}°C`;
 }
 
 function findMeButton() {
