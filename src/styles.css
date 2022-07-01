@@ -55,10 +55,11 @@ footer {
     display: block;
     float: left;
     margin-bottom: 25px;
-    width: fit-content;
+    width: 500px;
+    min-width: 200px;
     padding-top: 50px;
     margin-left: -75px;
-    /* overflow: hidden;   */
+    white-space: wrap;
 }
 .main-icon-area {
     
@@ -92,7 +93,8 @@ footer {
 .current-city {
     font-style: normal;
     font-weight: 500;
-    font-size: 55px;
+    font-size: 45px;
+    
 }
 
 /* SIDEBAR */
