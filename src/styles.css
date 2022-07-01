@@ -27,9 +27,11 @@ footer {
     margin-top: 50px;
     border-radius: 15px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+   
+   
 }
 .current-date-block {
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 .current-time {
     font-weight: 200;
@@ -44,21 +46,63 @@ footer {
     font-size: 25px;
 }
 .current-weather-block {
-    margin-top: 220px;
+    /* margin-top: 220px; */
     
 }
 .main-icon {
-    width: 200px;
-    margin-left: -50px;
+    width: 250px;
     
+   
+}
+.main-icon:hover {
+    transform: scale(1.2);
+    transition: all 0.4s 0s ease-in-out;
+    opacity: 0.8;
 
 }
 
+.current-date-block {
+    
+    margin-left: 25px;
+    margin-bottom: 150px;
+    margin-top: 25px;
+    width: fit-content;
+    text-align: center;
+    
+  
+}
+.current-weather-block {
+    display: block;
+    float: left;
+    
+    margin-bottom: 25px;
+    width: fit-content;
+    padding-top: 50px;
+    margin-left: -75px;
+    overflow: hidden;
+    
+    
+    
+
+    
+}
+.main-icon-area {
+    
+    float: left;
+
+    width: fit-content;
+    
+    
+   
+    
+    
+   
+}
 .current-temperature {
     font-style: normal;
     font-weight: 500;
     font-size: 85px;
-    margin-left: -90px;
+    
 }
 .unit { 
     font-weight: 200;
@@ -76,7 +120,7 @@ footer {
 .farenheit-unit:hover,
 .celsius-unit:hover {
     color: #ace0f9;
-    transition: all 0.5s 0s ease-in-out;
+    transition: all 0.4s 0s ease-in-out;
 }
 .separator {
     font-size: 35px;
@@ -85,7 +129,8 @@ footer {
     font-style: normal;
     font-weight: 500;
     font-size: 55px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    
 }
 
 /* SIDEBAR */
@@ -100,13 +145,11 @@ footer {
     min-width: 300px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
-.input-form:focus {
+.input-form:focus { 
     border-color: #ace0f9;
     box-shadow: 0 0 0 0.2rem #ace0f9;
 }
-.search-button, .find-me-button {
-   
+.search-button, .find-me-button { 
     padding: 5px;
     font-size: 15px;
     color: white;
@@ -118,14 +161,14 @@ footer {
 .find-me-button:hover {
     background-color: #ffb5b5;
     border-color: #ffcbcb;
-    transition: all 0.5s 0s ease-in-out;
+    transition: all 0.4s 0s ease-in-out;
 }
 .search-button:focus, 
 .find-me-button:focus {
     background-color: #ffb5b5;
     border-color: #ffcbcb;
 }
-.forecast {
+.forecast { 
     margin-top: 20px;
     margin-left: 25px;
 }
@@ -148,26 +191,21 @@ footer {
 .forecast-humidity-value:hover, 
 .forecast-wind-value:hover {
     transform: scale(1.2);
-    transition: all 0.5s 0s ease-in-out;
-  
-
+    transition: all 0.4s 0s ease-in-out;
 }
 .mini-icon {
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) fixed;
     border-radius: 15px;
     margin-top: 5px;
-   
 }
 .mini-icon:hover {
-    transition: all 0.5s 0s ease-in-out;
+    transition: all 0.4s 0s ease-in-out;
     transform: scale(1.2);
     border-radius: 25px;
 }
 .precipitation {
-    margin-top: 10px;
-    
+    margin-top: 10px; 
 }
-
 .subscription {
     color: #E4ACAB;
 }
