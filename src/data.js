@@ -106,7 +106,7 @@ function showCurrentData(response) {
   let city = response.data.name;
   let currentCity = document.querySelector("#city");
   currentCity.innerHTML = `${city}`;
-  let temp = Math.round(response.data.main.temp);
+  temp = Math.round(response.data.main.temp);
   let cutTemp = temp.slice(0, -1);
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = `${cutTemp}°C`;
@@ -133,7 +133,7 @@ function tempCelsius(event) {
     let celsiusTemperatureElement = document.querySelector("#temperature");
     celsiusTemperatureElement.innerHTML = `${temp}`
 }
-
+let temp = null;
 let cutTemp = null;
 
 let showTempF = document.querySelector("#farenheit");
