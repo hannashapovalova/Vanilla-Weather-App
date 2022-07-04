@@ -3,11 +3,6 @@ body {
     background: linear-gradient(to top, #EFD4D3 0%, #ace0f9 100%) fixed;
     
 }
-
-h1 {
-    display: inline;
-}
-
 footer {
     margin-top: 25px;
     color: #b4b4b4;
@@ -68,6 +63,7 @@ footer {
     width: fit-content;
 }
 .current-temperature {
+    display: inline;
     font-style: normal;
     font-weight: 500;
     font-size: 85px;
@@ -91,6 +87,7 @@ footer {
     font-size: 35px;
 }
 .current-city {
+    display: inline;
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -120,6 +117,7 @@ footer {
     border-color: #ace0f9;
     background-color: #ace0f9;
     border-width: 2px;
+
 }
 .search-button:hover, 
 .find-me-button:hover {

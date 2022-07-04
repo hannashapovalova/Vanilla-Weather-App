@@ -1,4 +1,4 @@
-window.onload = findMeButton;
+//window.onload = findMeButton;
 // Current Dates, Hours, Minutes, Day, Months
 
 let now = new Date ();
