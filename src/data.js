@@ -51,6 +51,50 @@ let currentDayOfWeeek = days[now.getDay()];
 let dayOfWeek = document.querySelector("#day");
 dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
 
+// Forecast
+
+function showForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function(day) {
+    forecastHTML = forecastHTML + `<div class="col">
+                  <ul class="forecast-list">
+                    <li class="forecast-item forecast-day-of-week">${day}</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="forecast-list">
+                    <li class="forecast-item forecast-temperature">13 C°</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="forecast-list">
+                    <li class="forecast-icon">
+                      <img 
+                      class="mini-icon" 
+                      src="src/icons/5729378_sunny_sun_weather_climate_forecast.png" 
+                      alt="Sunny" 
+                      width="35px">
+                    </li>
+                  </ul>
+                </div>`;
+  })
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+showForecast();
+
+
 // API
 
 function getApiWeather(city) {
