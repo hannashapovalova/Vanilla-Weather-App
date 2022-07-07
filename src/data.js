@@ -53,7 +53,8 @@ dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
 
 // Forecast
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
   let days = [
     "Sunday",
@@ -92,7 +93,7 @@ function showForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-showForecast();
+
 
 
 // API
@@ -113,13 +114,23 @@ function search(event) {
     let currentCity = document.querySelector("#city");
     if (searchInput.value) {
     currentCity.innerHTML = `${searchInput.value}`;
-    } else {
-    alert("Please, type a city...");
-    }
+    } 
 }
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
+
+}
 
 function showTemperature(response) {
     temp = Math.round(response.data.main.temp);
@@ -133,6 +144,8 @@ function showTemperature(response) {
     let humidity = Math.round(response.data.main.humidity);
     let showHumidity = document.querySelector("#humidity");
     showHumidity.innerHTML = `${humidity}`;
+
+    getForecast(response.data.coord);
 }
 
 // Get current city and temp by Geolocation
